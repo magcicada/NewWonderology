@@ -14,7 +14,6 @@ import com.verdantartifice.thaumicwonders.common.items.catalysts.ItemTransmuterS
 import com.verdantartifice.thaumicwonders.common.items.consumables.ItemLetheWater;
 import com.verdantartifice.thaumicwonders.common.items.consumables.ItemPanacea;
 import com.verdantartifice.thaumicwonders.common.items.entities.ItemFlyingCarpet;
-import com.verdantartifice.thaumicwonders.common.items.misc.ItemDisjunctionCloth;
 import com.verdantartifice.thaumicwonders.common.items.misc.ItemStructureDiviner;
 import com.verdantartifice.thaumicwonders.common.items.misc.ItemTimewinder;
 import com.verdantartifice.thaumicwonders.common.items.plants.ItemCinderpearlSeed;
@@ -31,7 +30,6 @@ public class InitItems {
     public static final Set<IVariantItem> ITEM_VARIANT_HOLDERS = new HashSet<IVariantItem>();
     
     public static void initItems(IForgeRegistry<Item> forgeRegistry) {
-        registerItem(forgeRegistry, new ItemDisjunctionCloth());
         registerItem(forgeRegistry, new ItemPrimalDestroyer());
         registerItem(forgeRegistry, new ItemFlyingCarpet());
         registerItem(forgeRegistry, new ItemTimewinder());
