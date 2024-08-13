@@ -13,7 +13,6 @@ import com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlienistSto
 import com.verdantartifice.thaumicwonders.common.items.catalysts.ItemTransmuterStone;
 import com.verdantartifice.thaumicwonders.common.items.consumables.ItemLetheWater;
 import com.verdantartifice.thaumicwonders.common.items.consumables.ItemPanacea;
-import com.verdantartifice.thaumicwonders.common.items.consumables.ItemPrimalArrow;
 import com.verdantartifice.thaumicwonders.common.items.entities.ItemFlyingCarpet;
 import com.verdantartifice.thaumicwonders.common.items.misc.ItemDisjunctionCloth;
 import com.verdantartifice.thaumicwonders.common.items.misc.ItemStructureDiviner;
@@ -21,7 +20,6 @@ import com.verdantartifice.thaumicwonders.common.items.misc.ItemTimewinder;
 import com.verdantartifice.thaumicwonders.common.items.plants.ItemCinderpearlSeed;
 import com.verdantartifice.thaumicwonders.common.items.plants.ItemShimmerleafSeed;
 import com.verdantartifice.thaumicwonders.common.items.plants.ItemVishroomSpore;
-import com.verdantartifice.thaumicwonders.common.items.tools.ItemBoneBow;
 import com.verdantartifice.thaumicwonders.common.items.tools.ItemPrimalDestroyer;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -47,8 +45,6 @@ public class InitItems {
         registerItem(forgeRegistry, new ItemStructureDiviner());
         registerItem(forgeRegistry, new ItemNightVisionGoggles());
         registerItem(forgeRegistry, new ItemCleansingCharm());
-        registerItem(forgeRegistry, new ItemBoneBow());
-        registerItem(forgeRegistry, new ItemPrimalArrow());
         registerItem(forgeRegistry, new ItemTW("primordial_grain"));
         registerItem(forgeRegistry, new ItemShimmerleafSeed());
         registerItem(forgeRegistry, new ItemCinderpearlSeed());

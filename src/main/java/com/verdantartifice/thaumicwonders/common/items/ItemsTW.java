@@ -4,7 +4,6 @@ import com.verdantartifice.thaumicwonders.ThaumicWonders;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -24,8 +23,6 @@ public class ItemsTW {
     public static final Item STRUCTURE_DIVINER = null;
     public static final ItemArmor NIGHT_VISION_GOGGLES = null;
     public static final Item CLEANSING_CHARM = null;
-    public static final ItemBow BONE_BOW = null;
-    public static final Item PRIMAL_ARROW = null;
     public static final Item PRIMORDIAL_GRAIN = null;
     public static final Item SHIMMERLEAF_SEED = null;
     public static final Item CINDERPEARL_SEED = null;
