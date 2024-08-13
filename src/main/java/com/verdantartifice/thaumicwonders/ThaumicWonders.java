@@ -20,7 +20,7 @@ public class ThaumicWonders {
     public static final String MODID = Tags.MOD_ID;
     public static final String NAME = "Thaumic Wonders";
     public static final String VERSION = Tags.VERSION;
-    public static final String DEPENDENCIES = "required-after:thaumcraft";
+    public static final String DEPENDENCIES = "required-after:thaumcraft@[1.12.2-6.1.BETA26,)";
     public static final String UPDATE_URL = "https://pastebin.com/raw/7QELk9HJ";
 
     public static final CreativeTabs CREATIVE_TAB = new CreativeTabTW(CreativeTabs.getNextID(), ThaumicWonders.MODID);
