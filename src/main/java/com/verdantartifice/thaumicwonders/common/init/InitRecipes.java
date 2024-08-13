@@ -748,7 +748,7 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "shimmerleaf_seed"), new InfusionRecipe(
                 "TWOND_MYSTIC_GARDENING",
                 new ItemStack(ItemsTW.SHIMMERLEAF_SEED, 1),
-                2,
+                1,
                 new AspectList().add(Aspect.PLANT, 5).add(Aspect.LIFE, 5).add(Aspect.AURA, 5),
                 new ItemStack(Items.WHEAT_SEEDS),
                 new Object[] {
@@ -759,7 +759,7 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "cinderpearl_seed"), new InfusionRecipe(
                 "TWOND_MYSTIC_GARDENING",
                 new ItemStack(ItemsTW.CINDERPEARL_SEED, 1),
-                2,
+                1,
                 new AspectList().add(Aspect.PLANT, 5).add(Aspect.LIFE, 5).add(Aspect.FIRE, 5),
                 new ItemStack(Items.WHEAT_SEEDS),
                 new Object[] {
@@ -770,7 +770,7 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "vishroom_spore"), new InfusionRecipe(
                 "TWOND_MYSTIC_GARDENING",
                 new ItemStack(ItemsTW.VISHROOM_SPORE, 1),
-                2,
+                1,
                 new AspectList().add(Aspect.PLANT, 5).add(Aspect.LIFE, 5).add(Aspect.MAGIC, 5),
                 new ItemStack(Items.WHEAT_SEEDS),
                 new Object[] {
