@@ -25,7 +25,7 @@ public class ItemTimewinder extends ItemClock implements IRechargable {
     public ItemTimewinder() {
         super();
         setRegistryName(ThaumicWonders.MODID, "timewinder");
-        setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         setCreativeTab(ThaumicWonders.CREATIVE_TAB);
         setMaxStackSize(1);
         setNoRepair();

@@ -13,7 +13,7 @@ public class ItemVishroomSpore extends ItemSeeds {
     public ItemVishroomSpore() {
         super(BlocksTW.VISHROOM_CROP, Blocks.GRASS);
         setRegistryName(ThaumicWonders.MODID, "vishroom_spore");
-        setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         setCreativeTab(ThaumicWonders.CREATIVE_TAB);
     }
 

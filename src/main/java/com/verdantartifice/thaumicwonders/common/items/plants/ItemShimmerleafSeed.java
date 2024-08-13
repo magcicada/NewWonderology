@@ -13,7 +13,7 @@ public class ItemShimmerleafSeed extends ItemSeeds {
     public ItemShimmerleafSeed() {
         super(BlocksTW.SHIMMERLEAF_CROP, Blocks.GRASS);
         setRegistryName(ThaumicWonders.MODID, "shimmerleaf_seed");
-        setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         setCreativeTab(ThaumicWonders.CREATIVE_TAB);
     }
     

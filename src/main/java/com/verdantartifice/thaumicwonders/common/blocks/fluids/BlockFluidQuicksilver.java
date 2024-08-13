@@ -21,13 +21,13 @@ public class BlockFluidQuicksilver extends BlockFluidClassic {
     public BlockFluidQuicksilver() {
         super(FluidQuicksilver.INSTANCE, FLUID_QUICKSILVER_MATERIAL);
         this.setRegistryName(ThaumicWonders.MODID, "fluid_quicksilver");
-        setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         this.setCreativeTab(ThaumicWonders.CREATIVE_TAB);
         this.setQuantaPerBlock(4);
     }
     
     @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+    public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
         if (entityIn instanceof EntityLivingBase) {
             ((EntityLivingBase)entityIn).addPotionEffect(new PotionEffect(MobEffects.POISON, 100));
         }

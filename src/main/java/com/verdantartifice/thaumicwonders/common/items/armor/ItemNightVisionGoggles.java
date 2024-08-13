@@ -34,7 +34,7 @@ public class ItemNightVisionGoggles extends ItemArmor implements IBauble, IRende
     public ItemNightVisionGoggles() {
         super(ThaumcraftMaterials.ARMORMAT_SPECIAL, 4, EntityEquipmentSlot.HEAD);
         this.setRegistryName(ThaumicWonders.MODID, "night_vision_goggles");
-        this.setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        this.setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         this.setCreativeTab(ThaumicWonders.CREATIVE_TAB);
         this.setMaxDamage(350);
     }

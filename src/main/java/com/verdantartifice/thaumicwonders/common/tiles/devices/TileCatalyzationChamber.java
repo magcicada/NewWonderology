@@ -203,7 +203,7 @@ public class TileCatalyzationChamber extends TileTWInventory implements ITickabl
                 if ( tile != null &&
                      tile instanceof TileBellows &&
                      BlockStateUtils.getFacing(this.world.getBlockState(tilePos)) == dir.getOpposite() &&
-                     this.world.isBlockIndirectlyGettingPowered(tilePos) == 0 ) {
+                     this.world.getRedstonePowerFromNeighbors(tilePos) == 0 ) {
                     count++;
                 }
             }
@@ -213,8 +213,8 @@ public class TileCatalyzationChamber extends TileTWInventory implements ITickabl
 
     private void setFacing() {
         EnumFacing face = this.getFacing().getOpposite();
-        this.facingX = face.getFrontOffsetX();
-        this.facingZ = face.getFrontOffsetZ();
+        this.facingX = face.getXOffset();
+        this.facingZ = face.getZOffset();
     }
     
     @Override

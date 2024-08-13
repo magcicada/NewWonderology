@@ -18,6 +18,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -57,7 +58,7 @@ public class BlockCatalyzationChamber extends BlockDeviceTW<TileCatalyzationCham
     
     @Override
     @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.CUTOUT_MIPPED;
     }
     
@@ -107,7 +108,7 @@ public class BlockCatalyzationChamber extends BlockDeviceTW<TileCatalyzationCham
     }
     
     @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+    public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
         if (entityIn.posX < pos.getX() + 0.3F) {
             entityIn.motionX += 0.0001D;
         }
@@ -136,7 +137,7 @@ public class BlockCatalyzationChamber extends BlockDeviceTW<TileCatalyzationCham
                 ((EntityLivingBase)entityIn).addPotionEffect(new PotionEffect(MobEffects.POISON, 100));
             }
         }
-        super.onEntityCollidedWithBlock(worldIn, pos, state, entityIn);
+        super.onEntityCollision(worldIn, pos, state, entityIn);
     }
     
     @Override

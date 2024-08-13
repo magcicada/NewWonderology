@@ -17,12 +17,12 @@ public class BlockHexamite extends BlockTNT {
     public BlockHexamite() {
         super();
         setRegistryName(ThaumicWonders.MODID, "hexamite");
-        setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         setCreativeTab(ThaumicWonders.CREATIVE_TAB);        
     }
     
     @Override
-    public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
+    public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
         if (!worldIn.isRemote) {
             EntityHexamitePrimed entityPrimed = new EntityHexamitePrimed(worldIn, (double)((float)pos.getX() + 0.5F), (double)pos.getY(), (double)((float)pos.getZ() + 0.5F), explosionIn.getExplosivePlacedBy());
             entityPrimed.setFuse((short)(worldIn.rand.nextInt(entityPrimed.getFuse() / 4) + entityPrimed.getFuse() / 8));

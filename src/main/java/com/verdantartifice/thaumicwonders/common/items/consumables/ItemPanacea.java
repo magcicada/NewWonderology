@@ -29,7 +29,7 @@ public class ItemPanacea extends ItemFood implements IVariantItem {
         super(6, 1.8F, false);
         this.baseName = "panacea";
         this.setRegistryName(ThaumicWonders.MODID, this.baseName);
-        this.setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        this.setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         this.setCreativeTab(ThaumicWonders.CREATIVE_TAB);
         this.setAlwaysEdible();
         
@@ -42,11 +42,11 @@ public class ItemPanacea extends ItemFood implements IVariantItem {
     }
     
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
+    public String getTranslationKey(ItemStack stack) {
         if (this.getHasSubtypes() && stack.getMetadata() < this.variants.length && this.variants[stack.getMetadata()] != this.baseName) {
-            return String.format(super.getUnlocalizedName() + ".%s", this.variants[stack.getMetadata()]);
+            return String.format(super.getTranslationKey() + ".%s", this.variants[stack.getMetadata()]);
         } else {
-            return super.getUnlocalizedName(stack);
+            return super.getTranslationKey(stack);
         }
     }
     

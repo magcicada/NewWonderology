@@ -70,7 +70,7 @@ public abstract class AbstractTileResearchEngine extends TileTW implements IAspe
                     int taken = otherTile.takeEssentia(this.getAspect(), 1, face.getOpposite());
                     int leftover = this.addToContainer(this.getAspect(), taken);
                     if (leftover > 0) {
-                        ThaumicWonders.LOGGER.info("{} spilling {} essentia on fill", this.blockType.getRegistryName().getResourcePath(), leftover);
+                        ThaumicWonders.LOGGER.info("{} spilling {} essentia on fill", this.blockType.getRegistryName().getPath(), leftover);
                         AuraHelper.polluteAura(this.world, this.pos, leftover, true);
                     }
                     this.syncTile(false);

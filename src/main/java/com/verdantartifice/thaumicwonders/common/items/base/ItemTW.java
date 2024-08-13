@@ -20,7 +20,7 @@ public class ItemTW extends Item implements IVariantItem {
     public ItemTW(String name, String... variants) {
         super();
         setRegistryName(ThaumicWonders.MODID, name);
-        setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         setCreativeTab(ThaumicWonders.CREATIVE_TAB);
         
         this.baseName = name;
@@ -33,11 +33,11 @@ public class ItemTW extends Item implements IVariantItem {
     }
     
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
+    public String getTranslationKey(ItemStack stack) {
         if (this.getHasSubtypes() && stack.getMetadata() < this.variants.length && this.variants[stack.getMetadata()] != this.baseName) {
-            return String.format(super.getUnlocalizedName() + ".%s", this.variants[stack.getMetadata()]);
+            return String.format(super.getTranslationKey() + ".%s", this.variants[stack.getMetadata()]);
         } else {
-            return super.getUnlocalizedName(stack);
+            return super.getTranslationKey(stack);
         }
     }
     

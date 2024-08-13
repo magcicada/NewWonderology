@@ -71,7 +71,7 @@ public class BlockCreativeEssentiaJar extends BlockTileTW<TileCreativeEssentiaJa
     
     @Override
     @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.TRANSLUCENT;
     }
 
@@ -165,7 +165,7 @@ public class BlockCreativeEssentiaJar extends BlockTileTW<TileCreativeEssentiaJa
                     if (phialAspects != null && phialAspects.size() == 1) {
                         Aspect aspect = phialAspects.getAspects()[0];
                         if (!worldIn.isRemote && playerIn.getHeldItem(hand).getItemDamage() != 0 && tileEntity.amount <= (CAPACITY - 10) && tileEntity.doesContainerAccept(aspect) && tileEntity.addToContainer(aspect, 10) == 0) {
-                            worldIn.markAndNotifyBlock(pos, worldIn.getChunkFromBlockCoords(pos), state, state, 0x3);
+                            worldIn.markAndNotifyBlock(pos, worldIn.getChunk(pos), state, state, 0x3);
                             tileEntity.syncTile(true);
                             playerIn.getHeldItem(hand).shrink(1);
                             ItemStack newPhialStack = new ItemStack(itemPhial, 1, 0);
@@ -192,7 +192,7 @@ public class BlockCreativeEssentiaJar extends BlockTileTW<TileCreativeEssentiaJa
                 if (worldIn.isRemote) {
                     worldIn.playSound(null, pos, SoundsTC.page, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 } else {
-                    worldIn.spawnEntity(new EntityItem(worldIn, pos.getX() + 0.5F + facing.getFrontOffsetX() / 3.0F, pos.getY() + 0.5F, pos.getZ() + 0.5F + facing.getFrontOffsetZ() / 3.0F, new ItemStack(ItemsTC.label)));
+                    worldIn.spawnEntity(new EntityItem(worldIn, pos.getX() + 0.5F + facing.getXOffset() / 3.0F, pos.getY() + 0.5F, pos.getZ() + 0.5F + facing.getZOffset() / 3.0F, new ItemStack(ItemsTC.label)));
                 }
             } else if (playerIn.isSneaking() && playerIn.getHeldItem(hand).isEmpty()) {
                 // Dump the jar
@@ -228,7 +228,7 @@ public class BlockCreativeEssentiaJar extends BlockTileTW<TileCreativeEssentiaJa
                     }
                     this.onBlockPlacedBy(player.world, pos, player.world.getBlockState(pos), player, null);
                     tileEntity.aspectFilter = tileEntity.aspect;
-                    player.world.markAndNotifyBlock(pos, player.world.getChunkFromBlockCoords(pos), player.world.getBlockState(pos), player.world.getBlockState(pos), 0x3);
+                    player.world.markAndNotifyBlock(pos, player.world.getChunk(pos), player.world.getBlockState(pos), player.world.getBlockState(pos), 0x3);
                     tileEntity.markDirty();
                     player.world.playSound(null, pos, SoundsTC.jar, SoundCategory.BLOCKS, 0.4F, 1.0F);
                     return true;

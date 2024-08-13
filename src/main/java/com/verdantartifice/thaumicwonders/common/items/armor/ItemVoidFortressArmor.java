@@ -37,7 +37,7 @@ public class ItemVoidFortressArmor extends ItemArmor implements ISpecialArmor, I
     public ItemVoidFortressArmor(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
         this.setRegistryName(ThaumicWonders.MODID, name);
-        this.setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        this.setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         this.setCreativeTab(ThaumicWonders.CREATIVE_TAB);
     }
 

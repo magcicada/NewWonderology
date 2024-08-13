@@ -17,7 +17,7 @@ public abstract class AbstractBlockMysticCrop extends BlockCrops {
     public AbstractBlockMysticCrop(String name) {
         super();
         this.setRegistryName(ThaumicWonders.MODID, name);
-        this.setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        this.setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
     }
     
     protected abstract IBlockState getMatureBlockState();

@@ -72,8 +72,8 @@ public class TesrDimensionalRipper extends TileEntitySpecialRenderer<TileDimensi
             GlStateManager.depthMask(false);
             for (EnumFacing face : EnumFacing.values()) {
                 GL11.glPushMatrix();
-                GL11.glRotatef(90.0F, -face.getFrontOffsetY(), face.getFrontOffsetX(), -face.getFrontOffsetZ());
-                if (face.getFrontOffsetZ() < 0) {
+                GL11.glRotatef(90.0F, -face.getYOffset(), face.getXOffset(), -face.getZOffset());
+                if (face.getZOffset() < 0) {
                     GL11.glTranslated(0.0D, 0.0D, 0.126D);
                     GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
                 } else {

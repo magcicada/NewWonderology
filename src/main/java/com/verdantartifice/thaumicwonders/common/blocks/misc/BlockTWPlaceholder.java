@@ -31,7 +31,7 @@ public class BlockTWPlaceholder extends BlockTW {
     }
     
     @Override
-    public EnumPushReaction getMobilityFlag(IBlockState state) {
+    public EnumPushReaction getPushReaction(IBlockState state) {
         return EnumPushReaction.BLOCK;
     }
     

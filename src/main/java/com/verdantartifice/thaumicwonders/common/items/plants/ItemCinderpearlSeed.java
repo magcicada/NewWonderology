@@ -13,7 +13,7 @@ public class ItemCinderpearlSeed extends ItemSeeds {
     public ItemCinderpearlSeed() {
         super(BlocksTW.CINDERPEARL_CROP, Blocks.SAND);
         setRegistryName(ThaumicWonders.MODID, "cinderpearl_seed");
-        setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         setCreativeTab(ThaumicWonders.CREATIVE_TAB);
     }
 

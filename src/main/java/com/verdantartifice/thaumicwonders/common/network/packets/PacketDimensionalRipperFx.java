@@ -57,9 +57,9 @@ public class PacketDimensionalRipperFx implements IMessage {
             if (state.getBlock() instanceof IBlockFacing) {
                 EnumFacing blockFacing = state.getValue(IBlockFacing.FACING);
                 FXDispatcher.INSTANCE.beamBore(
-                    message.source.getX() + 0.5D + (blockFacing.getFrontOffsetX() / 2.0D), 
-                    message.source.getY() + 0.5D + (blockFacing.getFrontOffsetY() / 2.0D), 
-                    message.source.getZ() + 0.5D + (blockFacing.getFrontOffsetZ() / 2.0D), 
+                    message.source.getX() + 0.5D + (blockFacing.getXOffset() / 2.0D), 
+                    message.source.getY() + 0.5D + (blockFacing.getYOffset() / 2.0D), 
+                    message.source.getZ() + 0.5D + (blockFacing.getZOffset() / 2.0D), 
                     message.target.getX() + 0.5D, 
                     message.target.getY() + 0.5D, 
                     message.target.getZ() + 0.5D, 

@@ -30,7 +30,7 @@ public class ItemBoneBow extends ItemBow implements IRechargable {
     public ItemBoneBow() {
         this.setCreativeTab(ThaumicWonders.CREATIVE_TAB);
         this.setRegistryName(ThaumicWonders.MODID, "bone_bow");
-        this.setUnlocalizedName(ThaumicWonders.MODID + "." + this.getRegistryName().getResourcePath());
+        this.setTranslationKey(ThaumicWonders.MODID + "." + this.getRegistryName().getPath());
         this.setMaxStackSize(1);
         this.setMaxDamage(512);
         
