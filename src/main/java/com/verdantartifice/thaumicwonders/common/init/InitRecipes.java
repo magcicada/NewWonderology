@@ -747,36 +747,33 @@ public class InitRecipes {
         
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "shimmerleaf_seed"), new InfusionRecipe(
                 "TWOND_MYSTIC_GARDENING",
-                new ItemStack(ItemsTW.SHIMMERLEAF_SEED, 8),
+                new ItemStack(ItemsTW.SHIMMERLEAF_SEED, 1),
                 2,
-                new AspectList().add(Aspect.PLANT, 10).add(Aspect.LIFE, 10).add(Aspect.AURA, 5),
+                new AspectList().add(Aspect.PLANT, 5).add(Aspect.LIFE, 5).add(Aspect.AURA, 5),
                 new ItemStack(Items.WHEAT_SEEDS),
                 new Object[] {
-                        new ItemStack(BlocksTC.shimmerleaf),
                         new ItemStack(ItemsTC.salisMundus)
                 }
         ));
         
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "cinderpearl_seed"), new InfusionRecipe(
                 "TWOND_MYSTIC_GARDENING",
-                new ItemStack(ItemsTW.CINDERPEARL_SEED, 8),
+                new ItemStack(ItemsTW.CINDERPEARL_SEED, 1),
                 2,
-                new AspectList().add(Aspect.PLANT, 10).add(Aspect.LIFE, 10).add(Aspect.FIRE, 5),
+                new AspectList().add(Aspect.PLANT, 5).add(Aspect.LIFE, 5).add(Aspect.FIRE, 5),
                 new ItemStack(Items.WHEAT_SEEDS),
                 new Object[] {
-                        new ItemStack(BlocksTC.cinderpearl),
                         new ItemStack(ItemsTC.salisMundus)
                 }
         ));
         
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "vishroom_spore"), new InfusionRecipe(
                 "TWOND_MYSTIC_GARDENING",
-                new ItemStack(ItemsTW.VISHROOM_SPORE, 8),
+                new ItemStack(ItemsTW.VISHROOM_SPORE, 1),
                 2,
-                new AspectList().add(Aspect.PLANT, 10).add(Aspect.LIFE, 10).add(Aspect.MAGIC, 5),
+                new AspectList().add(Aspect.PLANT, 5).add(Aspect.LIFE, 5).add(Aspect.MAGIC, 5),
                 new ItemStack(Items.WHEAT_SEEDS),
                 new Object[] {
-                        new ItemStack(BlocksTC.vishroom),
                         new ItemStack(ItemsTC.salisMundus)
                 }
         ));
