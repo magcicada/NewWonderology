@@ -93,7 +93,7 @@ public class TileTW extends TileEntity {
     
     public EnumFacing getFacing() {
         try {
-            return EnumFacing.getFront(this.getBlockMetadata() & 0x7);
+            return EnumFacing.byIndex(this.getBlockMetadata() & 0x7);
         }
         catch (Exception localException) {}
         return EnumFacing.UP;
