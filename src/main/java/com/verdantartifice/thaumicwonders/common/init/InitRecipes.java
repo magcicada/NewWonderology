@@ -608,7 +608,7 @@ public class InitRecipes {
                 new Object[] {
                         Ingredient.fromItem(ItemsTC.primordialPearl),
                         "plateVoid",
-                        "plateVoid",
+                        new ItemStack(ItemsTC.crimsonPlateHelm, 1),
                         new ItemStack(ItemsTC.goggles, 1, 32767),
                         new ItemStack(Items.GHAST_TEAR),
                         new ItemStack(ItemsTC.salisMundus),
@@ -627,7 +627,7 @@ public class InitRecipes {
                         "plateVoid",
                         "plateVoid",
                         "plateVoid",
-                        "plateVoid",
+                        new ItemStack(ItemsTC.crimsonPlateChest, 1),
                         new ItemStack(ItemsTC.salisMundus),
                         "leather"
                 }
@@ -643,7 +643,7 @@ public class InitRecipes {
                         Ingredient.fromItem(ItemsTC.primordialPearl),
                         "plateVoid",
                         "plateVoid",
-                        "plateVoid",
+                        new ItemStack(ItemsTC.crimsonPlateLegs, 1),
                         new ItemStack(ItemsTC.salisMundus),
                         "leather"
                 }
