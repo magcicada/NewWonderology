@@ -135,7 +135,7 @@ public class InitRecipes {
     }
     
     private static void initCoalescencePlatform() {
-        Part VMET = new Part(BlocksTC.metalBlockVoid, null);
+        Part VMET = new Part(BlocksTC.stoneArcane, null);
         Part ASBR = new Part(BlocksTC.stoneArcaneBrick, null);
         Part SNTP = new Part(BlocksTC.stoneArcane, "AIR");
         Part SNB1 = new Part(BlocksTC.stoneArcane, new ItemStack(BlocksTC.pillarArcane, 1, BlockPillar.calcMeta(EnumFacing.EAST)));
