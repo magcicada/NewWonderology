@@ -183,9 +183,8 @@ public class InitRecipes {
                 "TWOND_COALESCENCE_MATRIX", 
                 coalescencePlatformBlueprint, 
                 new ItemStack[] {
-                        new ItemStack(BlocksTC.metalBlockVoid, 45),
                         new ItemStack(BlocksTC.stoneArcaneBrick, 24),
-                        new ItemStack(BlocksTC.stoneArcane, 16),
+                        new ItemStack(BlocksTC.stoneArcane, 61),
                         new ItemStack(BlocksTW.COALESCENCE_MATRIX_PRECURSOR)
                 }
         ));
