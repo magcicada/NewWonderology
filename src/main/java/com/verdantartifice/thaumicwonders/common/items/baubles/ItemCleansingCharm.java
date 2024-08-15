@@ -11,7 +11,6 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagInt;
@@ -126,15 +125,5 @@ public class ItemCleansingCharm extends ItemTW implements IBauble, IRechargable 
     @Override
     public EnumRarity getRarity(ItemStack stack) {
         return EnumRarity.RARE;
-    }
-
-    @Override
-    public void onEquipped(ItemStack stack, EntityLivingBase player) {
-        player.playSound(SoundEvents.ENTITY_ENDEREYE_DEATH, 0.75F, 2.0F);
-    }
-
-    @Override
-    public void onUnequipped(ItemStack stack, EntityLivingBase player) {
-        player.playSound(SoundEvents.ENTITY_ENDEREYE_DEATH, 0.75F, 2.0F);
     }
 }
