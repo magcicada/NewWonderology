@@ -2,6 +2,7 @@ package com.verdantartifice.thaumicwonders.common.items.baubles;
 
 import java.util.List;
 
+import com.verdantartifice.thaumicwonders.client.config.TWConfig;
 import com.verdantartifice.thaumicwonders.common.items.base.ItemTW;
 
 import baubles.api.BaubleType;
@@ -24,16 +25,16 @@ import thaumcraft.api.items.IRechargable;
 import thaumcraft.api.items.RechargeHelper;
 
 public class ItemCleansingCharm extends ItemTW implements IBauble, IRechargable {
-    protected static final int VIS_CAPACITY = 200;
-    protected static final int MAX_PROGRESS = (20 * 60 * 60);
-    protected static final int ENERGY_PER_VIS = (MAX_PROGRESS / VIS_CAPACITY) - 1;
+    protected static final int VIS_CAPACITY = TWConfig.general_settings.CC_CAPACITY;
+    protected static final int MAX_PROGRESS = (20 * 60 * TWConfig.general_settings.CC_TIME);
+    protected static final int ENERGY_PER_VIS = (MAX_PROGRESS / TWConfig.general_settings.CC_COST) - 1;
 
     public ItemCleansingCharm() {
         super("cleansing_charm");
         this.setMaxStackSize(1);
         this.setNoRepair();
     }
-    
+
     @Override
     public int getMaxCharge(ItemStack stack, EntityLivingBase player) {
         return VIS_CAPACITY;
@@ -52,17 +53,17 @@ public class ItemCleansingCharm extends ItemTW implements IBauble, IRechargable 
     @Override
     public void onWornTick(ItemStack itemstack, EntityLivingBase elb) {
         if (elb != null && elb instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer)elb;
+            EntityPlayer player = (EntityPlayer) elb;
             IPlayerWarp warp = ThaumcraftCapabilities.getWarp(player);
             if (warp.get(IPlayerWarp.EnumWarpType.NORMAL) > 0) {
                 if (this.hasEnergy(itemstack)) {
                     this.incrementProgress(itemstack);
                     int progress = this.getProgress(itemstack);
-                    if (progress % 60 == 0) {
-                        AuraHelper.polluteAura(player.world, player.getPosition(), 0.1F, true);
+                    if (progress % 60 * TWConfig.general_settings.CC_FLUX == 0) {
+                        AuraHelper.polluteAura(player.world, player.getPosition(), (float) TWConfig.general_settings.CC_FLUX_AMOUNT, true);
                     }
                     if (progress >= MAX_PROGRESS) {
-                        ThaumcraftApi.internalMethods.addWarpToPlayer(player, -1, IPlayerWarp.EnumWarpType.NORMAL);
+                        ThaumcraftApi.internalMethods.addWarpToPlayer(player, -TWConfig.general_settings.CC_WARP, IPlayerWarp.EnumWarpType.NORMAL);
                         this.setProgress(itemstack, 0);
                     }
                 }
@@ -70,7 +71,7 @@ public class ItemCleansingCharm extends ItemTW implements IBauble, IRechargable 
             }
         }
     }
-    
+
     protected void incrementProgress(ItemStack stack) {
         this.setProgress(stack, this.getProgress(stack) + 1);
     }
@@ -82,11 +83,11 @@ public class ItemCleansingCharm extends ItemTW implements IBauble, IRechargable 
             return 0;
         }
     }
-    
+
     protected void setProgress(ItemStack stack, int progress) {
         stack.setTagInfo("progress", new NBTTagInt(progress));
     }
-    
+
     protected void consumeEnergy(ItemStack stack, EntityLivingBase player) {
         int energy = this.getEnergy(stack);
         if (energy > 0) {
@@ -96,7 +97,7 @@ public class ItemCleansingCharm extends ItemTW implements IBauble, IRechargable 
         }
         this.setEnergy(stack, energy);
     }
-    
+
     protected int getEnergy(ItemStack stack) {
         if (stack.hasTagCompound()) {
             return stack.getTagCompound().getInteger("energy");
@@ -104,23 +105,23 @@ public class ItemCleansingCharm extends ItemTW implements IBauble, IRechargable 
             return 0;
         }
     }
-    
+
     protected void setEnergy(ItemStack stack, int energy) {
         stack.setTagInfo("energy", new NBTTagInt(energy));
     }
-    
+
     protected boolean hasEnergy(ItemStack stack) {
         return (this.getEnergy(stack) > 0 || RechargeHelper.getCharge(stack) > 0);
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        int percent = (int)(((double)this.getProgress(stack) / (double)MAX_PROGRESS) * 100);
+        int percent = (int) (((double) this.getProgress(stack) / (double) MAX_PROGRESS) * 100);
         tooltip.add(I18n.format("item.thaumicwonders.cleansing_charm.tooltip.progress", percent));
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
-    
+
     @Override
     public EnumRarity getRarity(ItemStack stack) {
         return EnumRarity.RARE;
