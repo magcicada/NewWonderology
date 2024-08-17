@@ -7,8 +7,8 @@
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Daedalus4096"],
-  "credits": "Thanks to Azanor for Thaumcraft. Thanks to Loreli for the art.",
+  "authorList": ["Daedalus4096", "IcarussOne"],
+  "credits": "Thanks to Azanor for Thaumcraft. Thanks to Loreli for the art. Thanks to IcarussOne for working on the fork.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": ["thaumcraft"]
