@@ -45,7 +45,7 @@ public class TWConfig {
         public int CC_TIME = 5;
 
         @Config.Name("Cleansing Charm: Warp")
-        @Config.Comment("The amount of warp taken by the Cleansing Charm  [default: 1]")
+        @Config.Comment("The amount of Warp taken by the Cleansing Charm  [default: 1]")
         @Config.RangeInt(min = 1, max = 99999)
         @Config.RequiresMcRestart
         public int CC_WARP = 1;
