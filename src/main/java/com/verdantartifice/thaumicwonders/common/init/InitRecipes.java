@@ -544,29 +544,7 @@ public class InitRecipes {
                 new AspectList().add(Aspect.METAL, 100).add(Aspect.FLUX, 100).add(Aspect.ALCHEMY, 25),
                 new ItemStack(ItemsTW.ALCHEMIST_STONE),
                 ingredients.toArray()
-        ));
-        
-        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "meteorb"), new InfusionRecipe(
-                "TWOND_METEORB",
-                new ItemStack(BlocksTW.METEORB),
-                6,
-                new AspectList().add(Aspect.AIR, 100).add(Aspect.WATER, 100).add(Aspect.ENERGY, 100).add(Aspect.ELDRITCH, 50),
-                new ItemStack(Items.ENDER_PEARL),
-                new Object[] {
-                        new ItemStack(BlocksTC.stoneArcane),
-                        new ItemStack(BlocksTC.slabArcaneStone),
-                        new ItemStack(BlocksTC.tube),
-                        new ItemStack(BlocksTC.stoneArcane),
-                        new ItemStack(BlocksTC.slabArcaneStone),
-                        new ItemStack(BlocksTC.tube),
-                        new ItemStack(BlocksTC.stoneArcane),
-                        new ItemStack(BlocksTC.slabArcaneStone),
-                        new ItemStack(BlocksTC.tube),
-                        new ItemStack(BlocksTC.stoneArcane),
-                        new ItemStack(BlocksTC.slabArcaneStone),
-                        new ItemStack(Blocks.STONE_BUTTON)
-                }
-        ));
+        )); 
         
         List<Object> divinerIngredients = new ArrayList<Object>();
         divinerIngredients.add("oreIron");
@@ -645,22 +623,6 @@ public class InitRecipes {
                         new ItemStack(ItemsTC.crimsonPlateLegs),
                         new ItemStack(ItemsTC.salisMundus),
                         "leather"
-                }
-        ));
-        
-        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "meaty_orb"), new InfusionRecipe(
-                "TWOND_MEATY_ORB",
-                new ItemStack(BlocksTW.MEATY_ORB),
-                8,
-                new AspectList().add(Aspect.WATER, 250).add(Aspect.LIFE, 250).add(Aspect.ELDRITCH, 250),
-                new ItemStack(BlocksTW.METEORB),
-                new Object[] {
-                        Ingredient.fromItem(ItemsTC.primordialPearl),
-                        new ItemStack(Items.BEEF),
-                        new ItemStack(Items.PORKCHOP),
-                        new ItemStack(Items.CHICKEN),
-                        new ItemStack(Items.MUTTON),
-                        new ItemStack(Items.RABBIT)
                 }
         ));
         
