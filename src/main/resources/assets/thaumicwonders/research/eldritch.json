@@ -15,8 +15,7 @@
                 {
                     "text": "thaumicwonders.research.dimensional_ripper.text.stage.1",
                     "required_knowledge": ["OBSERVATION;ELDRITCH;1", "THEORY;ELDRITCH;1", "THEORY;ARTIFICE;1"],
-                    "required_research":["!vitium"],
-                    "warp": 2
+                    "required_research":["!vitium"]
                 },
                 {
                     "text": "thaumicwonders.research.dimensional_ripper.text.stage.2",
