@@ -34,7 +34,7 @@
             "parents": ["TWOND_BASE", "~ALUMENTUM"],
             "siblings": [],
             "meta": [],
-            "location": [-2, -2],
+            "location": [-2, -1],
             "reward_item": [],
             "reward_knowledge": [],
             "stages": [
@@ -61,7 +61,7 @@
             "parents": ["TWOND_FLUX_CAPACITOR"],
             "siblings": [],
             "meta": [],
-            "location": [-6, -5],
+            "location": [-5, -5],
             "reward_item": [],
             "reward_knowledge": [],
             "stages": [

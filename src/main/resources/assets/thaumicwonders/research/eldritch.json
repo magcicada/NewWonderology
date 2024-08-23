@@ -62,7 +62,7 @@
             "parents": ["TWOND_INSPIRATION_ENGINE", "~BASEELDRITCH", "~MINDBIOTHAUMIC"],
             "siblings": [],
             "meta": ["SPIKY", "HIDDEN"],
-            "location": [4, 2],
+            "location": [5, 2],
             "reward_item": [],
             "reward_knowledge": [],
             "stages": [
@@ -124,7 +124,7 @@
             "parents": ["TWOND_DIMENSIONAL_RIPPER", "~VISBATTERY", "~FLUXCLEANUP"],
             "siblings": [],
             "meta": [],
-            "location": [-6, -3],
+            "location": [-5, -3],
             "reward_item": [],
             "reward_knowledge": [],
             "stages": [
