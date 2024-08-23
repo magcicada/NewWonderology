@@ -16,6 +16,9 @@ public class ItemsTW {
     public static final Item TRANSMUTER_STONE = null;
     public static final Item ELDRITCH_CLUSTER = null;
     public static final Item ALIENIST_STONE = null;
+    public static final ItemArmor VOIDCALLER_HELM = null;
+    public static final ItemArmor VOIDCALLER_CHEST = null;
+    public static final ItemArmor VOIDCALLER_LEGS = null;
     public static final ItemArmor VOID_FORTRESS_HELM = null;
     public static final ItemArmor VOID_FORTRESS_CHEST = null;
     public static final ItemArmor VOID_FORTRESS_LEGS = null;
