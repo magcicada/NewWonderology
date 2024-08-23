@@ -68,6 +68,9 @@ item.thaumicwonders.vishroom_spore.name=Vishroom Spore
 item.thaumicwonders.panacea.normal.name=Panacea
 item.thaumicwonders.panacea.enchanted.name=Enchanted Panacea
 item.thaumicwonders.lethe_water.name=Lethe Water
+item.thaumicwonders.voidcaller_helm.name=Voidcaller Helm
+item.thaumicwonders.voidcaller_chest.name=Voidcaller Cuirass
+item.thaumicwonders.voidcaller_legs.name=Voidcaller Thigh Guards
 
 // Entities
 entity.flying_carpet.name=Flying Carpet
@@ -82,7 +85,7 @@ fluid.fluid_quicksilver=Quicksilver
 tc.research_category.THAUMIC_WONDERS=Wonderology
 
 thaumicwonders.research.base.title=Wonderology
-thaumicwonders.research.base.text.stage.1=What wonders can the arts of thaumaturgy reveal to me?
+thaumicwonders.research.base.text.stage.1=While the application of thaumaturgy arts and its rules is close at times to mundane technology, sometimes I wonder what I can do with it when I decide to do something more... exotic? Something, that hardly any mundane devices can make. I must delve deeper into this and see what wonders the arts of thaumaturgy reveal to me.
 
 thaumicwonders.research.nether_hedge.title=Infernal Hedge Alchemy
 thaumicwonders.research.nether_hedge.text.stage.1=It bothers me a little that the principles of hedge alchemy are applicable to so few materials in this world.  Perhaps other worlds contain things that this art can be used to create...

@@ -5,6 +5,7 @@ import java.util.Set;
 
 import com.verdantartifice.thaumicwonders.common.items.armor.ItemNightVisionGoggles;
 import com.verdantartifice.thaumicwonders.common.items.armor.ItemVoidFortressArmor;
+import com.verdantartifice.thaumicwonders.common.items.armor.ItemVoidcallerArmor;
 import com.verdantartifice.thaumicwonders.common.items.base.IVariantItem;
 import com.verdantartifice.thaumicwonders.common.items.base.ItemTW;
 import com.verdantartifice.thaumicwonders.common.items.baubles.ItemCleansingCharm;
@@ -28,18 +29,21 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class InitItems {
     public static final Set<Item> ITEMS = new HashSet<Item>();
     public static final Set<IVariantItem> ITEM_VARIANT_HOLDERS = new HashSet<IVariantItem>();
-    
+
     public static void initItems(IForgeRegistry<Item> forgeRegistry) {
         registerItem(forgeRegistry, new ItemPrimalDestroyer());
         registerItem(forgeRegistry, new ItemFlyingCarpet());
         registerItem(forgeRegistry, new ItemTimewinder());
         registerItem(forgeRegistry, new ItemAlchemistStone());
         registerItem(forgeRegistry, new ItemTransmuterStone());
-        registerItem(forgeRegistry, new ItemTW("eldritch_cluster", new String[] { "iron", "gold", "copper", "tin", "silver", "lead", "cinnabar", "quartz", "void" }));
+        registerItem(forgeRegistry, new ItemTW("eldritch_cluster", new String[]{"iron", "gold", "copper", "tin", "silver", "lead", "cinnabar", "quartz", "void"}));
         registerItem(forgeRegistry, new ItemAlienistStone());
         registerItem(forgeRegistry, new ItemVoidFortressArmor("void_fortress_helm", ItemVoidFortressArmor.MATERIAL, 4, EntityEquipmentSlot.HEAD));
         registerItem(forgeRegistry, new ItemVoidFortressArmor("void_fortress_chest", ItemVoidFortressArmor.MATERIAL, 4, EntityEquipmentSlot.CHEST));
         registerItem(forgeRegistry, new ItemVoidFortressArmor("void_fortress_legs", ItemVoidFortressArmor.MATERIAL, 4, EntityEquipmentSlot.LEGS));
+        registerItem(forgeRegistry, new ItemVoidcallerArmor("voidcaller_helm", ItemVoidcallerArmor.MATERIAL, 4, EntityEquipmentSlot.HEAD));
+        registerItem(forgeRegistry, new ItemVoidcallerArmor("voidcaller_chest", ItemVoidcallerArmor.MATERIAL, 4, EntityEquipmentSlot.CHEST));
+        registerItem(forgeRegistry, new ItemVoidcallerArmor("voidcaller_legs", ItemVoidcallerArmor.MATERIAL, 4, EntityEquipmentSlot.LEGS));
         registerItem(forgeRegistry, new ItemStructureDiviner());
         registerItem(forgeRegistry, new ItemNightVisionGoggles());
         registerItem(forgeRegistry, new ItemCleansingCharm());
@@ -50,11 +54,11 @@ public class InitItems {
         registerItem(forgeRegistry, new ItemPanacea());
         registerItem(forgeRegistry, new ItemLetheWater());
     }
-    
+
     private static void registerItem(IForgeRegistry<Item> forgeRegistry, Item item) {
         forgeRegistry.register(item);
         if (item.getHasSubtypes() && item instanceof IVariantItem) {
-            InitItems.ITEM_VARIANT_HOLDERS.add((IVariantItem)item);
+            InitItems.ITEM_VARIANT_HOLDERS.add((IVariantItem) item);
         } else {
             InitItems.ITEMS.add(item);
         }
