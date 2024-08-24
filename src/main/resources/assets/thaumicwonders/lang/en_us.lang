@@ -87,13 +87,9 @@ tc.research_category.THAUMIC_WONDERS=Wonderology
 thaumicwonders.research.base.title=Wonderology
 thaumicwonders.research.base.text.stage.1=While the application of thaumaturgy arts and its rules is close at times to mundane technology, sometimes I wonder what I can do with it when I decide to do something more... exotic? Something, that hardly any mundane devices can make. I must delve deeper into this and see what wonders the arts of thaumaturgy reveal to me.
 
-thaumicwonders.research.nether_hedge.title=Infernal Hedge Alchemy
-thaumicwonders.research.nether_hedge.text.stage.1=It bothers me a little that the principles of hedge alchemy are applicable to so few materials in this world.  Perhaps other worlds contain things that this art can be used to create...
-thaumicwonders.research.nether_hedge.text.stage.2=As I hoped, the Nether does indeed contain materials that my arts can replicate. Strangely, not all of them follow quite the same rules that I've come to expect in this world. I'll need to be mindful of the recipes as I work with them.
-
-thaumicwonders.research.end_hedge.title=Alien Hedge Alchemy
-thaumicwonders.research.end_hedge.text.stage.1=My travels have hinted at yet another world to explore. I'll have to study what I find there.
-thaumicwonders.research.end_hedge.text.stage.2=This "End" is an incredibly dangerous place, but it does contain a few materials that respond well to hedge alchemy. 
+thaumicwonders.research.dimensional_hedge.title=Dimensional Hedge Alchemy
+thaumicwonders.research.dimensional_hedge.text.stage.1=It bothers me a little that the principles of hedge alchemy are applicable to so few materials in this world.<BR>My travels have hinted at more worlds to explore. I'll have to study what I can find to utilize in hedge alchemy through my interdimensional travels.
+thaumicwonders.research.dimensional_hedge.text.stage.2=As I hoped, the Nether and the End do indeed contain materials that my arts can replicate. Strangely, not all of them follow quite the same rules that I've come to expect in normal hedge alchemy. I'll need to be mindful of the recipes as I work with them.
 
 thaumicwonders.research.everburning_urn.title=Everburning Urn
 thaumicwonders.research.everburning_urn.text.stage.1=The Everfull Urn is an incredibly useful device, but I'm convinced that I can do better. Something similar, but for other types of fluids. Fluids like, say... lava?

@@ -5,7 +5,7 @@
             "name": "thaumicwonders.research.everburning_urn.title",
             "icons": ["thaumicwonders:everburning_urn"],
             "category": "THAUMIC_WONDERS",
-            "parents": ["TWOND_NETHER_HEDGE", "~EVERFULLURN", "~INFUSION"],
+            "parents": ["TWOND_DIMENSIONAL_HEDGE", "~EVERFULLURN", "~INFUSION"],
             "siblings": [],
             "meta": [],
             "location": [-2, 2],
