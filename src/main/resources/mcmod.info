@@ -1,8 +1,8 @@
 [
 {
   "modid": "thaumicwonders",
-  "name": "Thaumic Wonders",
-  "description": "Create wonders with Thaumcraft 6!",
+  "name": "New Wonderology",
+  "description": "Thaumic Wonders but forked. Create wonders with Thaumcraft 6!",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

@@ -69,8 +69,8 @@ item.thaumicwonders.panacea.normal.name=Panacea
 item.thaumicwonders.panacea.enchanted.name=Enchanted Panacea
 item.thaumicwonders.lethe_water.name=Lethe Water
 item.thaumicwonders.voidcaller_helm.name=Voidcaller Helm
-item.thaumicwonders.voidcaller_chest.name=Voidcaller Cuirass
-item.thaumicwonders.voidcaller_legs.name=Voidcaller Thigh Guards
+item.thaumicwonders.voidcaller_chest.name=Voidcaller Chestplate
+item.thaumicwonders.voidcaller_legs.name=Voidcaller Greaves
 
 // Entities
 entity.flying_carpet.name=Flying Carpet
@@ -224,7 +224,7 @@ enchantment.special.voidflame=Voidflame
 enchantment.special.warpshell=Warpshell
 
 // Config
-key.categories.thaumicwonders=Thaumic Wonders
+key.categories.thaumicwonders=New Wonderology
 key.carpet_forward=Flying Carpet Forwards
 key.carpet_backward=Flying Carpet Backwards
 
@@ -275,6 +275,6 @@ event.lethe_water.not_found=You don't feel any different.
 event.corruption_avatar.empower=The Avatar of Corruption is empowered by a nearby rift!
 
 // Misc
-itemGroup.thaumicwonders=Thaumic Wonders
+itemGroup.thaumicwonders=New Wonderology
 item.creative_only=Creative only
 death.attack.primalDestroyerHunger=%s was devoured by their own Primal Destroyer
