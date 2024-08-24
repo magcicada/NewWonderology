@@ -110,7 +110,7 @@
             "parents": ["TWOND_DIMENSIONAL_HEDGE"],
             "siblings": [],
             "meta": [],
-            "location": [0, 6],
+            "location": [0, 5],
             "reward_item": [],
             "reward_knowledge": [],
             "stages": [
@@ -136,7 +136,7 @@
             "parents": ["TWOND_PANACEA"],
             "siblings": [],
             "meta": [],
-            "location": [0, 8],
+            "location": [0, 7],
             "reward_item": [],
             "reward_knowledge": [],
             "stages": [
