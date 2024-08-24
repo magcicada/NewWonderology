@@ -214,17 +214,16 @@ public class InitRecipes {
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "dimensional_ripper"), new ShapedArcaneRecipe(
                 defaultGroup,
                 "TWOND_DIMENSIONAL_RIPPER",
-                250,
-                new AspectList().add(Aspect.AIR, 3).add(Aspect.ENTROPY, 3),
+                100,
+                new AspectList(),
                 BlocksTW.DIMENSIONAL_RIPPER,
                 new Object[] {
-                        "BPB",
+                        "BBB",
                         "VAV",
                         "VMV",
                         Character.valueOf('B'), "plateBrass",
-                        Character.valueOf('P'), Ingredient.fromItem(ItemsTC.primordialPearl),
                         Character.valueOf('V'), "plateVoid",
-                        Character.valueOf('A'), new ItemStack(ItemsTC.turretPlacer, 1, 2),
+                        Character.valueOf('A'), new ItemStack(ItemsTC.morphicResonator),
                         Character.valueOf('M'), new ItemStack(ItemsTC.mechanismComplex)
                 }
         ));
@@ -561,12 +560,12 @@ public class InitRecipes {
         if (OreDictionary.doesOreNameExist("oreLead") && !OreDictionary.getOres("oreLead", false).isEmpty()) {
             ingredients.add("oreLead");
         }
-        divinerIngredients.add("oreCoal");
+        /*divinerIngredients.add("oreCoal");
         divinerIngredients.add("oreRedstone");
         divinerIngredients.add("oreLapis");
         divinerIngredients.add("oreDiamond");
         divinerIngredients.add("oreEmerald");
-        divinerIngredients.add("oreCinnabar");
+        divinerIngredients.add("oreCinnabar");*/
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "ore_diviner"), new InfusionRecipe(
                 "TWOND_ORE_DIVINER",
                 new ItemStack(BlocksTW.ORE_DIVINER),
