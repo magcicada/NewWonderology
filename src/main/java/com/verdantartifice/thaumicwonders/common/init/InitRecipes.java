@@ -560,12 +560,7 @@ public class InitRecipes {
         if (OreDictionary.doesOreNameExist("oreLead") && !OreDictionary.getOres("oreLead", false).isEmpty()) {
             ingredients.add("oreLead");
         }
-        /*divinerIngredients.add("oreCoal");
-        divinerIngredients.add("oreRedstone");
-        divinerIngredients.add("oreLapis");
-        divinerIngredients.add("oreDiamond");
-        divinerIngredients.add("oreEmerald");
-        divinerIngredients.add("oreCinnabar");*/
+        divinerIngredients.add("oreCinnabar");
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "ore_diviner"), new InfusionRecipe(
                 "TWOND_ORE_DIVINER",
                 new ItemStack(BlocksTW.ORE_DIVINER),
