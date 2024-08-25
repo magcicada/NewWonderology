@@ -8,6 +8,7 @@ import com.verdantartifice.thaumicwonders.common.network.packets.PacketLocalized
 
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,6 +21,7 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.nbt.NBTTagInt;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
@@ -30,12 +32,13 @@ import thaumcraft.api.capabilities.IPlayerKnowledge;
 import thaumcraft.api.capabilities.ThaumcraftCapabilities;
 import thaumcraft.api.items.IWarpingGear;
 import thaumcraft.api.items.ItemsTC;
+import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
 
 public class ItemPrimalDestroyer extends ItemSword implements IWarpingGear {
     public static final int MAX_HUNGER = 600;
-    
+
     public static Item.ToolMaterial toolMatVoidflame = EnumHelper.addToolMaterial("VOIDFLAME", 4, 200, 8.0F, 8.0F, 20).setRepairItem(new ItemStack(ItemsTC.ingots, 1, 1));
-    
+
     public ItemPrimalDestroyer() {
         super(toolMatVoidflame);
         this.setCreativeTab(ThaumicWonders.CREATIVE_TAB);
@@ -52,11 +55,11 @@ public class ItemPrimalDestroyer extends ItemSword implements IWarpingGear {
     public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
         if (!worldIn.isRemote && entityIn != null && (entityIn.ticksExisted % 20 == 0) && entityIn instanceof EntityPlayer) {
-            EntityPlayer entityPlayer = (EntityPlayer)entityIn;
+            EntityPlayer entityPlayer = (EntityPlayer) entityIn;
             if (stack.isItemDamaged()) {
                 stack.damageItem(-1, entityPlayer);
             }
-            
+
             boolean inOffHand = itemSlot == 0 && ItemStack.areItemStacksEqual(stack, entityPlayer.getHeldItemOffhand());
             boolean held = isSelected || inOffHand;
             boolean onHotbar = (itemSlot >= 0 && itemSlot <= 8);
@@ -69,18 +72,18 @@ public class ItemPrimalDestroyer extends ItemSword implements IWarpingGear {
                 if (hunger >= MAX_HUNGER) {
                     // Damage player and reset hunger
                     if (entityIn instanceof EntityPlayerMP) {
-                        PacketHandler.INSTANCE.sendTo(new PacketLocalizedMessage("event.primal_destroyer.hunger_full"), (EntityPlayerMP)entityIn);
+                        PacketHandler.INSTANCE.sendTo(new PacketLocalizedMessage("event.primal_destroyer.hunger_full"), (EntityPlayerMP) entityIn);
                     }
                     entityPlayer.attackEntityFrom(new DamageSource("primalDestroyerHunger"), 12.0F);
                     entityPlayer.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, 60));
                     entityPlayer.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 120));
                     hunger = 0;
-                    
+
                     // Give addenda research
                     IPlayerKnowledge knowledge = ThaumcraftCapabilities.getKnowledge(entityPlayer);
                     if (!knowledge.isResearchKnown("f_thevoidhungers")) {
                         knowledge.addResearch("f_thevoidhungers");
-                        knowledge.sync((EntityPlayerMP)entityPlayer);
+                        knowledge.sync((EntityPlayerMP) entityPlayer);
                     }
                 } else {
                     hunger++;
@@ -89,7 +92,7 @@ public class ItemPrimalDestroyer extends ItemSword implements IWarpingGear {
             }
         }
     }
-    
+
     @Override
     public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
         if (oldStack.getItem() == newStack.getItem() && !slotChanged) {
@@ -108,7 +111,8 @@ public class ItemPrimalDestroyer extends ItemSword implements IWarpingGear {
                 target.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, 60));
                 target.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 120));
                 target.setFire(3);
-            } catch (Exception e) {}
+            } catch (Exception e) {
+            }
         }
         if (!target.world.isRemote) {
             if (target.getHealth() <= 0.0F) {
@@ -119,14 +123,24 @@ public class ItemPrimalDestroyer extends ItemSword implements IWarpingGear {
         }
         return super.hitEntity(stack, target, attacker);
     }
-    
+
     private void decreaseHunger(ItemStack stack, int delta) {
         int hunger = 0;
         if (stack.hasTagCompound()) {
             hunger = stack.getTagCompound().getInteger("hunger");
         }
+
         hunger = Math.max(0, hunger - delta);
         stack.setTagInfo("hunger", new NBTTagInt(hunger));
+    }
+
+    @Override
+    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items) {
+        if (this.isInCreativeTab(tab)) {
+            ItemStack stack = new ItemStack(this);
+            EnumInfusionEnchantment.addInfusionEnchantment(stack, EnumInfusionEnchantment.ESSENCE, 3);
+            items.add(stack);
+        }
     }
 
     @Override
@@ -136,7 +150,7 @@ public class ItemPrimalDestroyer extends ItemSword implements IWarpingGear {
         tooltip.add(TextFormatting.GOLD + I18n.format("enchantment.special.voidflame"));
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
-    
+
     @Override
     public EnumRarity getRarity(ItemStack stack) {
         return EnumRarity.EPIC;

@@ -549,16 +549,16 @@ public class InitRecipes {
         divinerIngredients.add("oreIron");
         divinerIngredients.add("oreGold");
         if (OreDictionary.doesOreNameExist("oreCopper") && !OreDictionary.getOres("oreCopper", false).isEmpty()) {
-            ingredients.add("oreCopper");
+        	divinerIngredients.add("oreCopper");
         }
         if (OreDictionary.doesOreNameExist("oreTin") && !OreDictionary.getOres("oreTin", false).isEmpty()) {
-            ingredients.add("oreTin");
+        	divinerIngredients.add("oreTin");
         }
         if (OreDictionary.doesOreNameExist("oreSilver") && !OreDictionary.getOres("oreSilver", false).isEmpty()) {
-            ingredients.add("oreSilver");
+        	divinerIngredients.add("oreSilver");
         }
         if (OreDictionary.doesOreNameExist("oreLead") && !OreDictionary.getOres("oreLead", false).isEmpty()) {
-            ingredients.add("oreLead");
+        	divinerIngredients.add("oreLead");
         }
         divinerIngredients.add("oreCinnabar");
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "ore_diviner"), new InfusionRecipe(
