@@ -10,6 +10,8 @@ import com.verdantartifice.thaumicwonders.proxy.ProxyBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -46,5 +48,10 @@ public class RegistrationEvents {
     @SubscribeEvent
     public static void registerEntities(RegistryEvent.Register<EntityEntry> event) {
         InitEntities.initEntities(event.getRegistry());
+    }
+    
+    @SubscribeEvent
+    public static void registerModels(ModelRegistryEvent event) {
+        OBJLoader.INSTANCE.addDomain(ThaumicWonders.MODID);
     }
 }
