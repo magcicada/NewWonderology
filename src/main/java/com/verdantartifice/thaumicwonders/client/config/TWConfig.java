@@ -52,7 +52,7 @@ public class TWConfig {
         
         @Config.Name("Interface: HUDs")
         @Config.Comment("Whether or not to enable the HUDs displayed from Magic Carpets or the Primal Destroyer [default: true]")
-        @Config.RequiresMcRestart
+        @Config.RequiresWorldRestart
         public boolean I_HUD = true;
     }
 
