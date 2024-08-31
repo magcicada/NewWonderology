@@ -21,34 +21,39 @@ public class TWConfig {
         public int CC_CAPACITY = 200;
 
         @Config.Name("Cleansing Charm: Cost")
-        @Config.Comment("The Vis cost after Warp is taken by the Cleansing Charm [default: 10]")
+        @Config.Comment("The Vis cost after warp is taken by the Cleansing Charm [default: 10]")
         @Config.RangeInt(min = 1, max = 99999)
         @Config.RequiresMcRestart
         public int CC_COST = 10;
 
         @Config.Name("Cleansing Charm: Flux")
-        @Config.Comment("The amount of seconds it takes for Flux to dissipate into the aura while the activated Cleansing Charm is worn [default: 10]")
+        @Config.Comment("The amount of seconds it takes for flux to dissipate into the aura while the activated Cleansing Charm is worn [default: 10]")
         @Config.RangeInt(min = 1, max = 99999)
         @Config.RequiresMcRestart
         public int CC_FLUX = 10;
 
         @Config.Name("Cleansing Charm: Flux Amount")
-        @Config.Comment("The amount of Flux that generates from the activated Cleansing Charm [default: 0.1]")
+        @Config.Comment("The amount of flux that generates from the activated Cleansing Charm [default: 0.1]")
         @Config.RangeDouble(min = 0.1, max = 99999)
         @Config.RequiresMcRestart
         public double CC_FLUX_AMOUNT = 0.1D;
 
         @Config.Name("Cleansing Charm: Time")
-        @Config.Comment("The amount of minutes it takes for the Cleansing Charm to remove Warp [default: 5]")
+        @Config.Comment("The amount of minutes it takes for the Cleansing Charm to remove warp [default: 5]")
         @Config.RangeInt(min = 1, max = 99999)
         @Config.RequiresMcRestart
         public int CC_TIME = 5;
 
         @Config.Name("Cleansing Charm: Warp")
-        @Config.Comment("The amount of Warp taken by the Cleansing Charm  [default: 1]")
+        @Config.Comment("The amount of warp taken by the Cleansing Charm [default: 1]")
         @Config.RangeInt(min = 1, max = 99999)
         @Config.RequiresMcRestart
         public int CC_WARP = 1;
+        
+        @Config.Name("Interface: HUDs")
+        @Config.Comment("Whether or not to enable the HUDs displayed from Magic Carpets or the Primal Destroyer [default: true]")
+        @Config.RequiresMcRestart
+        public boolean I_HUD = true;
     }
 
     @Mod.EventBusSubscriber(modid = ThaumicWonders.MODID)

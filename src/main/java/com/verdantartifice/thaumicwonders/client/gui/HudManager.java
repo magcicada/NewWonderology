@@ -3,6 +3,7 @@ package com.verdantartifice.thaumicwonders.client.gui;
 import org.lwjgl.opengl.GL11;
 
 import com.verdantartifice.thaumicwonders.ThaumicWonders;
+import com.verdantartifice.thaumicwonders.client.config.TWConfig;
 import com.verdantartifice.thaumicwonders.common.entities.EntityFlyingCarpet;
 import com.verdantartifice.thaumicwonders.common.items.entities.ItemFlyingCarpet;
 import com.verdantartifice.thaumicwonders.common.items.tools.ItemPrimalDestroyer;
@@ -27,6 +28,8 @@ public class HudManager {
     private static final ResourceLocation HUD = new ResourceLocation(ThaumicWonders.MODID, "textures/gui/hud.png");
     
     public void renderHuds(Minecraft mc, float renderTickTime, EntityPlayer player, long time) {
+    	if (!TWConfig.general_settings.I_HUD) return;
+    	
         GL11.glPushMatrix();
         ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft());
         GL11.glClear(GL11.GL_ACCUM);
