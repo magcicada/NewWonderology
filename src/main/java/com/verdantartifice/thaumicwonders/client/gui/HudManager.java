@@ -29,8 +29,9 @@ public class HudManager {
     
     public void renderHuds(Minecraft mc, float renderTickTime, EntityPlayer player, long time) {
     	if (!TWConfig.general_settings.I_HUD) return;
-    	
+
         GL11.glPushMatrix();
+        GL11.glPushAttrib(GL11.GL_TRANSFORM_BIT | GL11.GL_COLOR_BUFFER_BIT | GL11.GL_TEXTURE_BIT | GL11.GL_ACCUM_BUFFER_BIT);
         ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft());
         GL11.glClear(GL11.GL_ACCUM);
         GL11.glMatrixMode(GL11.GL_PROJECTION);
@@ -89,6 +90,7 @@ public class HudManager {
         }
         
         GL11.glDisable(GL11.GL_BLEND);
+        GL11.glPopAttrib();
         GL11.glPopMatrix();
     }
     
