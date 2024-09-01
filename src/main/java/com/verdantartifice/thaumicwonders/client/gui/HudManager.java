@@ -1,5 +1,6 @@
 package com.verdantartifice.thaumicwonders.client.gui;
 
+import net.minecraft.client.renderer.GlStateManager;
 import org.lwjgl.opengl.GL11;
 
 import com.verdantartifice.thaumicwonders.ThaumicWonders;
@@ -31,7 +32,6 @@ public class HudManager {
     	if (!TWConfig.general_settings.I_HUD) return;
 
         GL11.glPushMatrix();
-        GL11.glPushAttrib(GL11.GL_TRANSFORM_BIT | GL11.GL_COLOR_BUFFER_BIT | GL11.GL_TEXTURE_BIT | GL11.GL_ACCUM_BUFFER_BIT);
         ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft());
         GL11.glClear(GL11.GL_ACCUM);
         GL11.glMatrixMode(GL11.GL_PROJECTION);
@@ -40,7 +40,7 @@ public class HudManager {
         GL11.glMatrixMode(GL11.GL_MODELVIEW);
         GL11.glLoadIdentity();
         GL11.glTranslatef(0.0F, 0.0F, -2000.0F);
-        GL11.glEnable(GL11.GL_BLEND);
+        GlStateManager.enableBlend();
         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
         
         if (mc.inGameHasFocus && Minecraft.isGuiEnabled()) {
@@ -89,15 +89,14 @@ public class HudManager {
             }
         }
         
-        GL11.glDisable(GL11.GL_BLEND);
-        GL11.glPopAttrib();
+        GlStateManager.disableBlend();
         GL11.glPopMatrix();
     }
     
     private void renderPrimalDestroyerHud(Minecraft mc, float partialTicks, EntityPlayer player, ItemStack itemStack, long time, int yStart) {
         // Draw background bars
         GL11.glPushMatrix();
-        GL11.glEnable(GL11.GL_BLEND);
+        GlStateManager.enableBlend();
         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
         GL11.glTranslated(0.0D, yStart, 0.0D);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -127,7 +126,7 @@ public class HudManager {
     private void renderCarpetHud(Minecraft mc, float partialTicks, EntityPlayer player, EntityFlyingCarpet carpet, long time, int yStart) {
         // Draw background bars
         GL11.glPushMatrix();
-        GL11.glEnable(GL11.GL_BLEND);
+        GlStateManager.enableBlend();
         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
         GL11.glTranslated(0.0D, yStart, 0.0D);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
