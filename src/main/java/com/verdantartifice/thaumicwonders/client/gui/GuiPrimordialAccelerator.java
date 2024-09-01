@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class GuiPrimordialAccelerator extends GuiContainer {
     private static final ResourceLocation TEXTURE = new ResourceLocation(ThaumicWonders.MODID, "textures/gui/gui_primordial_accelerator.png");
-    
+
     public GuiPrimordialAccelerator(InventoryPlayer inventoryPlayer, TilePrimordialAccelerator acceleratorTile) {
         super(new ContainerPrimordialAccelerator(inventoryPlayer, acceleratorTile));
         this.xSize = 175;
@@ -24,7 +24,7 @@ public class GuiPrimordialAccelerator extends GuiContainer {
         super.drawScreen(mouseX, mouseY, partialTicks);
         this.renderHoveredToolTip(mouseX, mouseY);
     }
-    
+
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         this.mc.renderEngine.bindTexture(TEXTURE);
