@@ -1,12 +1,11 @@
 package com.verdantartifice.thaumicwonders.client.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import com.verdantartifice.thaumicwonders.ThaumicWonders;
 import com.verdantartifice.thaumicwonders.common.containers.ContainerCatalyzationChamber;
 import com.verdantartifice.thaumicwonders.common.tiles.devices.TileCatalyzationChamber;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 
@@ -29,10 +28,10 @@ public class GuiCatalyzationChamber extends GuiContainer {
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         this.mc.renderEngine.bindTexture(TEXTURE);
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+        GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         int xStart = (this.width - this.xSize) / 2;
         int yStart = (this.height - this.ySize) / 2;
-        GL11.glEnable(GL11.GL_BLEND);
+        GlStateManager.enableBlend();
         drawTexturedModalRect(xStart, yStart, 0, 0, this.xSize, this.ySize);
     }
 }
