@@ -1,11 +1,10 @@
 package com.verdantartifice.thaumicwonders.client.renderers.entity.monsters;
 
-import org.lwjgl.opengl.GL11;
-
 import com.verdantartifice.thaumicwonders.ThaumicWonders;
 import com.verdantartifice.thaumicwonders.common.entities.monsters.EntityCorruptionAvatar;
 
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.client.renderer.entity.RenderLivingBase;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -41,6 +40,6 @@ public class RenderCorruptionAvatar extends RenderBiped<EntityCorruptionAvatar> 
     @Override
     protected void preRenderCallback(EntityCorruptionAvatar entitylivingbaseIn, float partialTickTime) {
         super.preRenderCallback(entitylivingbaseIn, partialTickTime);
-        GL11.glScalef(1.15F, 1.15F, 1.15F);
+        GlStateManager.scale(1.15F, 1.15F, 1.15F);
     }
 }
