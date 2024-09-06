@@ -42,24 +42,29 @@ public class TesrDimensionalRipper extends TileEntitySpecialRenderer<TileDimensi
             ShaderHelper.useShader(ShaderHelper.endShader, this.shaderCallback);
 
             GlStateManager.pushMatrix();
-            GlStateManager.translate(x + 0.5D, y + 0.5D, z + 0.5D);
             switch (BlockStateUtils.getFacing(te.getBlockMetadata())) {
                 case DOWN:
+                    GlStateManager.translate(x + 0.5D, y + 0.25D, z + 0.5D);
                     GlStateManager.rotate(180.0F, 1.0F, 0.0F, 0.0F);
                     break;
                 case NORTH:
+                    GlStateManager.translate(x + 0.5D, y + 0.5D, z + 0.25D);
                     GlStateManager.rotate(90.0F, -1.0F, 0.0F, 0.0F);
                     break;
                 case SOUTH:
+                    GlStateManager.translate(x + 0.5D, y + 0.5D, z + 0.75D);
                     GlStateManager.rotate(90.0F, 1.0F, 0.0F, 0.0F);
                     break;
                 case WEST:
+                    GlStateManager.translate(x + 0.25D, y + 0.5D, z + 0.5D);
                     GlStateManager.rotate(90.0F, 0.0F, 0.0F, 1.0F);
                     break;
                 case EAST:
+                    GlStateManager.translate(x + 0.75D, y + 0.5D, z + 0.5D);
                     GlStateManager.rotate(90.0F, 0.0F, 0.0F, -1.0F);
                     break;
                 case UP:
+                    GlStateManager.translate(x + 0.5D, y + 0.75D, z + 0.5D);
                 default:
                     // Don't rotate
                     break;
