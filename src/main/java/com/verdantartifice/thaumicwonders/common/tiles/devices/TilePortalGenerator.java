@@ -155,7 +155,7 @@ public class TilePortalGenerator extends TileTW implements ITickable, IGogglesDi
     public void spawnPortal() {
         if (!this.world.isRemote) {
             double posX = this.pos.up().getX() + 0.5D;
-            double posY = this.pos.up().getY();
+            double posY = this.pos.up().getY() + 0.5D;
             double posZ = this.pos.up().getZ() + 0.5D;
             EntityVoidPortal portal = new EntityVoidPortal(this.world);
             portal.setPosition(posX, posY, posZ);
