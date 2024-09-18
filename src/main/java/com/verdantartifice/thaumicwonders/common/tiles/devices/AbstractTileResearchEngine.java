@@ -130,7 +130,7 @@ public abstract class AbstractTileResearchEngine extends TileTW implements IAspe
 
     @Override
     public boolean isConnectable(EnumFacing face) {
-        return face != EnumFacing.UP;
+        return face == this.getFacing().getOpposite();
     }
 
     @Override
