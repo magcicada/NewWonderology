@@ -479,8 +479,8 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "madness_engine"), new InfusionRecipe(
                 "TWOND_MADNESS_ENGINE",
                 new ItemStack(BlocksTW.MADNESS_ENGINE),
-                6,
-                new AspectList().add(Aspect.ELDRITCH, 150).add(Aspect.MIND, 100).add(Aspect.MECHANISM, 100).add(Aspect.AURA, 50),
+                4,
+                new AspectList().add(Aspect.ELDRITCH, 100).add(Aspect.MIND, 100).add(Aspect.MECHANISM, 75).add(Aspect.AURA, 50),
                 new ItemStack(BlocksTW.INSPIRATION_ENGINE),
                 new Object[]{
                         "plateVoid",
