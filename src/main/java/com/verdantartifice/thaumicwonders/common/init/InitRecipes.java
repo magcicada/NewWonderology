@@ -564,8 +564,8 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "ore_diviner"), new InfusionRecipe(
                 "TWOND_ORE_DIVINER",
                 new ItemStack(BlocksTW.ORE_DIVINER),
-                6,
-                new AspectList().add(Aspect.SENSES, 100).add(Aspect.EARTH, 50).add(Aspect.METAL, 50).add(Aspect.MAGIC, 50),
+                4,
+                new AspectList().add(Aspect.SENSES, 75).add(Aspect.EARTH, 50).add(Aspect.METAL, 50).add(Aspect.MAGIC, 50),
                 new ItemStack(Blocks.QUARTZ_BLOCK),
                 divinerIngredients.toArray()
         ));
@@ -623,7 +623,7 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "structure_diviner"), new InfusionRecipe(
                 "TWOND_STRUCTURE_DIVINER",
                 new ItemStack(ItemsTW.STRUCTURE_DIVINER),
-                6,
+                4,
                 new AspectList().add(Aspect.SENSES, 100).add(Aspect.MECHANISM, 50).add(Aspect.MAGIC, 50).add(Aspect.EARTH, 50),
                 new ItemStack(Items.COMPASS),
                 new Object[]{
@@ -639,7 +639,7 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "night_vision_goggles"), new InfusionRecipe(
                 "TWOND_NV_GOGGLES",
                 new ItemStack(ItemsTW.NIGHT_VISION_GOGGLES),
-                4,
+                2,
                 new AspectList().add(Aspect.SENSES, 50).add(Aspect.LIGHT, 50).add(Aspect.MAGIC, 25).add(Aspect.ENERGY, 25),
                 new ItemStack(ItemsTC.goggles),
                 new Object[]{
@@ -654,7 +654,7 @@ public class InitRecipes {
                 "TWOND_VOID_BEACON",
                 new ItemStack(BlocksTW.VOID_BEACON),
                 10,
-                new AspectList().add(Aspect.ELDRITCH, 250).add(Aspect.VOID, 250).add(Aspect.MAGIC, 250).add(Aspect.FLUX, 200).add(Aspect.AIR, 100).add(Aspect.EARTH, 100).add(Aspect.FIRE, 100).add(Aspect.WATER, 100).add(Aspect.ORDER, 100).add(Aspect.ENTROPY, 100),
+                new AspectList().add(Aspect.ELDRITCH, 100).add(Aspect.VOID, 100).add(Aspect.MAGIC, 100).add(Aspect.FLUX, 100).add(Aspect.AIR, 50).add(Aspect.EARTH, 50).add(Aspect.FIRE, 50).add(Aspect.WATER, 50).add(Aspect.ORDER, 50).add(Aspect.ENTROPY, 50),
                 new ItemStack(Blocks.BEACON),
                 new Object[]{
                         Ingredient.fromItem(ItemsTC.primordialPearl),
@@ -671,8 +671,8 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "cleansing_charm"), new InfusionRecipe(
                 "TWOND_CLEANSING_CHARM",
                 new ItemStack(ItemsTW.CLEANSING_CHARM),
-                8,
-                new AspectList().add(Aspect.MIND, 225).add(Aspect.ORDER, 225).add(Aspect.ELDRITCH, 150).add(Aspect.LIFE, 150),
+                2,
+                new AspectList().add(Aspect.MIND, 75).add(Aspect.ORDER, 75).add(Aspect.ELDRITCH, 50).add(Aspect.LIFE, 50),
                 new ItemStack(Items.ENDER_PEARL),
                 new Object[]{
                         Ingredient.fromItem(ItemsTC.primordialPearl),
