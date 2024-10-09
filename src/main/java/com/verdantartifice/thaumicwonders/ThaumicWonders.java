@@ -46,7 +46,7 @@ public class ThaumicWonders {
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
 
-        ModFixs modFixer = FMLCommonHandler.instance().getDataFixer().init(ID, 1);
+        ModFixs modFixer = FMLCommonHandler.instance().getDataFixer().init(MODID, 1);
         modFixer.registerFix(FixTypes.ITEM_INSTANCE, new ItemDataFixer());
     }
     
