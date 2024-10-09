@@ -8,6 +8,7 @@ import javax.annotation.Nullable;
 
 import com.verdantartifice.thaumicwonders.ThaumicWonders;
 import com.verdantartifice.thaumicwonders.common.blocks.BlocksTW;
+import com.verdantartifice.thaumicwonders.common.crafting.recipes.RecipeDisjunctionClothUse;
 import com.verdantartifice.thaumicwonders.common.crafting.recipes.RecipeFlyingCarpetDyes;
 import com.verdantartifice.thaumicwonders.common.fluids.FluidQuicksilver;
 import com.verdantartifice.thaumicwonders.common.items.ItemsTW;
@@ -191,6 +192,7 @@ public class InitRecipes {
     }
 
     private static void initNormalRecipes(IForgeRegistry<IRecipe> forgeRegistry) {
+        forgeRegistry.register(new RecipeDisjunctionClothUse());
         forgeRegistry.register(new RecipeFlyingCarpetDyes());
 
         ResourceLocation qsGroup = new ResourceLocation(ThaumicWonders.MODID, "quicksilver_bucket_group");
@@ -359,6 +361,12 @@ public class InitRecipes {
                 new ItemStack(Items.ENDER_PEARL, 2),
                 new ItemStack(Items.ENDER_PEARL),
                 new AspectList().add(Aspect.MOTION, 15).add(Aspect.ELDRITCH, 10)
+        ));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation(ThaumicWonders.MODID, "disjunction_cloth"), new CrucibleRecipe(
+                "TWOND_DISJUNCTION_CLOTH",
+                new ItemStack(ItemsTW.DISJUNCTION_CLOTH),
+                new ItemStack(ItemsTC.fabric),
+                new AspectList().add(Aspect.MAGIC, 40).add(Aspect.VOID, 40).add(Aspect.AURA, 20)
         ));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation(ThaumicWonders.MODID, "alchemist_stone"), new CrucibleRecipe(
                 "TWOND_CATALYZATION_CHAMBER",
