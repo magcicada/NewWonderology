@@ -250,8 +250,8 @@ public class InitRecipes {
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "portal_anchor"), new ShapedArcaneRecipe(
                 defaultGroup,
                 "TWOND_VOID_PORTAL@2",
-                150,
-                new AspectList().add(Aspect.AIR, 3).add(Aspect.ORDER, 3).add(Aspect.ENTROPY, 3),
+                100,
+                new AspectList().add(Aspect.AIR, 1).add(Aspect.ORDER, 1).add(Aspect.ENTROPY, 1),
                 BlocksTW.PORTAL_ANCHOR,
                 new Object[]{
                         "VPV",
@@ -280,8 +280,8 @@ public class InitRecipes {
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "flux_distiller"), new ShapedArcaneRecipe(
                 defaultGroup,
                 "TWOND_FLUX_DISTILLER",
-                750,
-                new AspectList().add(Aspect.AIR, 8).add(Aspect.WATER, 8).add(Aspect.ORDER, 8),
+                250,
+                new AspectList().add(Aspect.AIR, 1).add(Aspect.WATER, 1).add(Aspect.ORDER, 1),
                 BlocksTW.FLUX_DISTILLER,
                 new Object[]{
                         "VLV",
@@ -372,7 +372,7 @@ public class InitRecipes {
                 "TWOND_CATALYZATION_CHAMBER",
                 new ItemStack(ItemsTW.ALCHEMIST_STONE),
                 new ItemStack(Items.DIAMOND),
-                new AspectList().add(Aspect.METAL, 50).add(Aspect.ORDER, 50).add(Aspect.ALCHEMY, 10)
+                new AspectList().add(Aspect.METAL, 40).add(Aspect.ORDER, 40).add(Aspect.ALCHEMY, 10)
         ));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation(ThaumicWonders.MODID, "transmuter_stone"), new CrucibleRecipe(
                 "TWOND_TRANSMUTER_STONE",
@@ -396,13 +396,13 @@ public class InitRecipes {
                 "TWOND_PANACEA",
                 new ItemStack(ItemsTW.PANACEA, 1, 1),
                 new ItemStack(Items.GOLDEN_APPLE, 1, 1),
-                new AspectList().add(Aspect.LIFE, 40).add(Aspect.ORDER, 40).add(Aspect.VOID, 40).add(Aspect.MIND, 40).add(Aspect.PROTECT, 40)
+                new AspectList().add(Aspect.LIFE, 20).add(Aspect.ORDER, 20).add(Aspect.VOID, 20)
         ));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation(ThaumicWonders.MODID, "alkahest_vat"), new CrucibleRecipe(
                 "TWOND_ALKAHEST",
                 new ItemStack(BlocksTW.ALKAHEST_VAT),
                 new ItemStack(BlocksTC.crucible),
-                new AspectList().add(Aspect.ALCHEMY, 25).add(Aspect.WATER, 25).add(Aspect.ENTROPY, 100).add(Aspect.PROTECT, 25)
+                new AspectList().add(Aspect.ALCHEMY, 25).add(Aspect.WATER, 25).add(Aspect.ENTROPY, 75).add(Aspect.PROTECT, 25)
         ));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation(ThaumicWonders.MODID, "lethe_water"), new CrucibleRecipe(
                 "TWOND_LETHE_WATER",
@@ -547,7 +547,7 @@ public class InitRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicWonders.MODID, "alienist_stone"), new InfusionRecipe(
                 "TWOND_ALIENIST_STONE",
                 new ItemStack(ItemsTW.ALIENIST_STONE),
-                7,
+                5,
                 new AspectList().add(Aspect.METAL, 100).add(Aspect.FLUX, 100).add(Aspect.ALCHEMY, 25),
                 new ItemStack(ItemsTW.ALCHEMIST_STONE),
                 ingredients.toArray()
