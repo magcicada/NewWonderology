@@ -15,4 +15,9 @@ public class ItemDisjunctionCloth extends ItemTW {
     public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
         return false;
     }
+
+    @Override
+    public boolean hasContainerItem(ItemStack stack) {
+        return true;
+    }
 }
