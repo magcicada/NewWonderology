@@ -3,11 +3,15 @@ package com.verdantartifice.thaumicwonders;
 import org.apache.logging.log4j.Logger;
 
 import com.verdantartifice.thaumicwonders.common.misc.CreativeTabTW;
+import com.verdantartifice.thaumicwonders.compat.datafixes.ItemDataFixer;
 import com.verdantartifice.thaumicwonders.proxy.IProxyTW;
 import com.verdantartifice.thaumicwonders.thaumicwonders.Tags;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.datafix.FixTypes;
+import net.minecraftforge.common.util.ModFixs;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -41,6 +45,9 @@ public class ThaumicWonders {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
+
+        ModFixs modFixer = FMLCommonHandler.instance().getDataFixer().init(ID, 1);
+        modFixer.registerFix(FixTypes.ITEM_INSTANCE, new ItemDataFixer());
     }
     
     @EventHandler
