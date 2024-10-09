@@ -39,7 +39,7 @@
             "parents": ["TWOND_BASE"],
             "siblings": [],
             "meta": [],
-            "location": [2, 0],
+            "location": [4, 0],
             "reward_item": [],
             "reward_knowledge": [],
             "stages": [
@@ -188,7 +188,7 @@
             "parents": ["TWOND_DISJUNCTION_CLOTH"],
             "siblings": [],
             "meta": [],
-            "location": [4, 0],
+            "location": [6, 0],
             "reward_item": [],
             "reward_knowledge": [],
             "stages": [
