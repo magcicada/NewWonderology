@@ -8,7 +8,7 @@
   "url": "",
   "updateUrl": "",
   "authorList": ["Daedalus4096", "IcarussOne"],
-  "credits": "\n \u00A7eMain Developers:\n [*] IcarussOne - Lead Developer & Writer\n [*] J. Carver - Artist & Lore Enthusiast\n \u00A76Special Thanks:\n [*] daedalus4096 - Originally creating Thaumic Wonders, which this addon continues from\n [*] Loreli - Former texture artist of Thaumic Wonders\n [*] VerySaltyOreos - Armor texture from the An Emberturgist's Standard resource pack that was modified and used for the Voidcaller Armor\n [*] MCThe_Paragon - Assets from their texture repository used for the catalyst stones\n [*] xJon - Giving general feedback on improving the mod, as well as creating and maintaining Tekkit SMP",
+  "credits": "\n \u00A7eMain Developers:\n [*] IcarussOne - Lead Developer & Writer\n [*] J. Carver - Artist & Lore Enthusiast\n \u00A76Special Thanks:\n [*] daedalus4096 - Originally creating Thaumic Wonders, which this addon continues from\n [*] Loreli - Former texture artist of Thaumic Wonders\n [*] VerySaltyOreos - Armor texture from the An Emberturgist's Standard resource pack that was modified and used for the Voidcaller Armor\n [*] MCThe_Paragon - Assets from their texture repository used for the catalyst stones and fluids\n [*] xJon - Giving general feedback on improving the mod, as well as creating and maintaining Tekkit SMP",
   "logoFile": "",
   "screenshots": [],
   "dependencies": ["thaumcraft"]
